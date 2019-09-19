@@ -28,6 +28,15 @@ class Trip {
     this.id = ++tripId
 
     store.passengers.push(this)
+
+    if(driver){
+      this.setDriver(driver)
+    }
+
+    if(passenger){
+      this.setPassenger(passenger)
+    }
+
   }
 
   setDriver(driver){
