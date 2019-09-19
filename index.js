@@ -58,7 +58,7 @@ class Trip {
     store.trips.push(this)
 
     if(driver){
-      this.driver(driver)
+      this.setDriver(driver)
     }
     if(passenger){
       this.setPassenger(passenger)
