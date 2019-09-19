@@ -25,7 +25,7 @@ class Driver {
         function(trip) {
           if (trip.driverId === this.id){
             return trip.passenger;}
-        }
+        }.bind(this)
     );
   }
 /////////
