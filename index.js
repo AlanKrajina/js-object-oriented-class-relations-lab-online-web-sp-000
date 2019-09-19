@@ -73,4 +73,24 @@ class Trip {
   setPassenger(passenger){
     this.passengerId = passenger.id
   }
+
+
+
+
+driver() {
+  return store.drivers.find(
+      function(driver) {
+          return driver.id === this.driverId;
+      }.bind(this)
+  );
+}
+
+user() {
+    return store.users.find(
+        function(user) {
+            return user.id === this.userId;
+        }.bind(this)
+    );
+}
+
 }
