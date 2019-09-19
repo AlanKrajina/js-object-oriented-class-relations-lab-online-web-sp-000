@@ -37,6 +37,7 @@ class Passenger {
 
     store.passengers.push(this)
   }
+  //A passenger has many trips
 
   trips() {
     return store.trips.filter(
@@ -45,10 +46,11 @@ class Passenger {
         }.bind(this)
     );
   }
+  //A passenger has many drivers through trips
 
   drivers() {
     return this.trips().map(trip => {
-      return trip.driver(); //trip belong to a passenger
+      return trip.driver();  //trip belongs to a driver
     });
   }
 }
@@ -60,27 +62,11 @@ class Passenger {
 class Trip {
   constructor (driver,passenger){
     this.id = ++tripId
-  //  this.driver = driver
-  //  this.passenger = passenger
+    this.driverId = driver.id;
+    this.passengerId = passenger.id;
 
     store.trips.push(this)
 
-    if(driver){
-      this.setDriver(driver)
-    }
-    if(passenger){
-      this.setPassenger(passenger)
-    }
-
-  }
-
-  setDriver(driver){
-    this.driverId = driver.id
-
-  }
-  setPassenger(passenger){
-    this.passengerId = passenger.id
-  }
 
 
 
