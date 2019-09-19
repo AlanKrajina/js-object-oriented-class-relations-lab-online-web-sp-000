@@ -21,7 +21,7 @@ class Driver {
   }
 /////////
   passengers() {
-    return store.trips.filter(
+    return store.trips.find(
         function(trip) {
           if (trip.driverId === this.id){
             return trip.passenger;}
