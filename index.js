@@ -20,14 +20,12 @@ class Driver {
     );
   }
 /////////
-  passengers() {
-    return store.trips.filter(
-        function(trip) {
-          if (trip.driverId === this.id){
-            return trip.passenger();}
-        }.bind(this)
-    );
-  }
+// A driver has many passengers through trips
+passengers() {
+  return this.trips().map(trip => {
+    return trip.passenger(); //trip belong to a passenger
+  });
+}
 ///////// trebaju mi passengeri samo od te jedne voznje a ne svi
 }
 
