@@ -30,7 +30,6 @@ class Trip {
     if(driver){
       this.setDriver(driver)
     }
-
     if(passenger){
       this.setPassenger(passenger)
     }
