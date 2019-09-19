@@ -85,10 +85,10 @@ driver() {
   );
 }
 
-user() {
-    return store.users.find(
-        function(user) {
-            return user.id === this.userId;
+passenger() {
+    return store.passengers.find(
+        function(passenger) {
+            return passenger.id === this.passengerId;
         }.bind(this)
     );
 }
