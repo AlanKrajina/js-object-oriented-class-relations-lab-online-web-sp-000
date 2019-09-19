@@ -68,6 +68,8 @@ class Trip {
 
   setDriver(driver){
     this.driverId = driver.id
+    this.driver = driver
+
   }
   setPassenger(passenger){
     this.passengerId = passenger.id
