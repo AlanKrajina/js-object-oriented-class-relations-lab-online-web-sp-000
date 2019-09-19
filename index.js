@@ -23,8 +23,8 @@ class Driver {
   passengers() {
     return store.trips.filter(
         function(trip) {
-  //        if (trip.driverId === this.id && trip.passenger === trip.passengerId){
-            return trip.passenger;
+          if (trip.driverId === trip.passengerId){
+            return trip.passenger;}
         }.bind(this)
     );
   }
