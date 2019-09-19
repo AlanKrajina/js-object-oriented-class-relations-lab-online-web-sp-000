@@ -12,27 +12,22 @@ class Driver {
     store.drivers.push(this)
   }
 
-  trips() {
-    return store.trips.filter(
-        function(trip) {
-            return trip.driverId === this.id;
-        }.bind(this)
-    );
-  }
-/////////
+//A driver has many trips
+trips() {
+  return store.trips.filter(
+      function(trip) {
+          return trip.driverId === this.id;
+      }.bind(this)
+  );
+}
+
 // A driver has many passengers through trips
 passengers() {
   return this.trips().map(trip => {
     return trip.passenger(); //trip belong to a passenger
   });
 }
-///////// trebaju mi passengeri samo od te jedne voznje a ne svi
 }
-
-
-
-
-
 
 
 class Passenger {
@@ -49,6 +44,12 @@ class Passenger {
             return trip.passengerId === this.id;
         }.bind(this)
     );
+  }
+
+  passengers() {
+    return this.trips().map(trip => {
+      return trip.driver(); //trip belong to a passenger
+    });
   }
 }
 
