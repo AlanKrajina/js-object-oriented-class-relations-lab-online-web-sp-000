@@ -85,6 +85,15 @@ driver() {
   );
 }
 
+drivers() {
+  return store.drivers.filter(
+      function(driver) {
+          return driver.tripId === this.id;
+      }.bind(this)
+  );
+}
+
+
 passenger() {
     return store.passengers.find(
         function(passenger) {
