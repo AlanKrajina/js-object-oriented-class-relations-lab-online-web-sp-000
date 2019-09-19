@@ -20,6 +20,14 @@ class Driver {
     );
   }
 
+  passengers() {
+    return store.passengers.filter(
+        function(passenger) {
+            return passenger.driverId === this.id;
+        }.bind(this)
+    );
+  }
+  
 }
 
 
@@ -84,9 +92,6 @@ driver() {
       }.bind(this)
   );
 }
-
-
-
 
 passenger() {
     return store.passengers.find(
