@@ -26,7 +26,7 @@ class Passenger {
 class Trip {
   constructor (driver,passenger){
     this.id = ++tripId
-    this.driver.id = driver.id
+    this.driver[id] = driver.id
     this.passenger.id = passenger.id
 
 
