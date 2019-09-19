@@ -21,11 +21,10 @@ class Driver {
   }
 /////////
   passengers() {
-    let pass ={}
     return store.trips.filter(
         function(trip) {
           if (trip.driverId === this.id){
-            return pass = trip.passenger;}
+            return trip.passenger;}
         }.bind(this)
     );
   }
