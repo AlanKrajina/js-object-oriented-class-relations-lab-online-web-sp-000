@@ -28,7 +28,7 @@ class Driver {
         }.bind(this)
     );
   }
-/////////
+///////// trebaju mi passengeri samo od te jedne voznje a ne svi
 }
 
 
