@@ -27,7 +27,7 @@ class Driver {
         }.bind(this)
     );
   }
-
+  
 }
 
 
@@ -93,7 +93,7 @@ driver() {
   );
 }
 
-passengers() {
+passenger() {
     return store.passengers.find(
         function(passenger) {
             return passenger.id === this.passengerId;
